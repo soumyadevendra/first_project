@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Website</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+          }
+        body{
+            font-family: arial,sans-serif;
+            background-color: #f8f8f8;
+           }
+           /* navbar */
+         nav{
+            background-color: white;
+            padding:20px;
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+            box-shadow: 0 2px 8px #add;
+           }
+        .logo{
+            color: blue;
+            font-size: 28px;
+            font-weight: bold;
+        } 
+        nav a {
+            text-decoration: none;
+            color:#333;
+            margin-left: 20px;
+            font-weight:bold;
+        }
+        nav a:hover {
+            color:orangered;
+        }
+        /* Hero Section*/
+        .hero{
+            text-align: center;
+            padding: 55px 20px;
+            background: #fff0e8;
+        } 
+        .hero h1{
+            font-size: 36px;
+            margin-bottom: 15px;
+        } 
+        .hero p {
+            color:#666;
+            margin-bottom: 25px;
+        }
+        .serach {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .search input{
+            width: 320px;
+            paddding:13px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        .search button{
+            padding: 13px 22px;
+            background-color: orangered;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .search button:hover {
+            background:#cc3700;
+        }
+        /* Main Section*/
+        .container h2 {
+            margin-bottom: 22px;
+        }
+        /* Food Categories*/
+        .categories {
+            display: flex;
+            gap:20px;
+            flex-wrap:wrap;
+            margin-bottom: 40px;
+        }
+        .category{
+            background:white;
+            padding: 20px;
+            border-radius:10px ;
+            text-align: center;
+            flex: 1;
+            min-width:110px;
+            cursor: pointer;
+            transition:0.3s;
+        }
+        .category:hover {
+            transform:translateY(-5px);
+            box-shadow: 0  5px 15px #ddd;
+        }
+        .category span {
+            font-size: 35px;
+        }
+        .category p {
+            margin-top: 10px;
+            font-size: bold;
+        }
+        /* Restaurant Cards*/
+        .restaurants {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:25px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow:0 2px 8px #add;
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform:translateY(-6px);
+            box-shadow: 0 8px 20px #ccc;
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 18px;
+        }
+        .card-content h3{
+            margin-bottom:10px;
+        }
+        .rating {
+            color: green;
+            font-weight: bold;
+            margin-bottom:10px;
+        }
+        .details {
+            color: #666;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .order-btn {
+            display: inline-block;
+            margin-top:15px;
+            background: orangered;
+            color:white;
+            padding:10px 18px;
+            color:white;
+            padding:10px 18px;
+            border:none;
+            border-radius: 5px;
+            border:none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .order-btn:hover {
+            background: #cc3700;
+        }
+        /*Footer*/
+        footer {
+            background: #222;
+            color:white;
+            text-align:center;
+            padding:22px;
+            margin-top:40px;
+        }
+        /* Responsive Design */
+        @media (max-width:768px)
+        {
+            nav{
+                flex-direction:column;
+                gap:15px
+            }
+            nav a {
+                margin:0 8px;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .restaurants {
+                grid-template-columns:repeat(2,1fr);
+            }
+        }
+        @media (max-width:500px)
+        {
+            .restaurants {
+                grid-template-coloumns: 1fr;
+            }
+            .search button{
+                padding:12px;
+            }
+        }
+        </style>
+</head>
+<body>
+    <!-- Navbar -->
+     <nav>
+        <div class="logo">Foodie</div>
+        <div>
+            <a href="#">Home</a>
+            <a href="#restaurants">Restaurants</a>
+            <a href="#categories">Categories</a>
+        </div>
+     </nav>
+     <!--Hero Section-->
+     <section class="hero">
+        <h1>Delicious Food,Deliverd Fast!</h1>
+        <p>order your favourite food from the best restaurantsnear you.</p>
+        <div class="search">
+            <input typpe="text" placeholder="search for food or restaurants">
+            <button type="button">search</button>
+        </div>
+     </section>
+     <!--Food Categories-->
+     <section class="container" id="categories">
+        <h2>whats on your mind?</h2>
+        <div class="categories">
+        <div class="category">
+            <span>pizza</span>
+            <p>pizza</p>
+        </div>   
+        </div>
+        <div>
+        class="category">
+        <span>burger</span>
+        <p>burger</p>
+        </div>
+        <div class="category">
+        <span>noodles</span>
+        <p>noodles</p>
+        </div>
+        <div class="category">
+            <span>birayani</span>
+            <p>birayani</p>
+        </div>
+        <div class="category">
+            <span>cake</span>
+            <p>cake</p>
+        </div>
+        </div>
+        </section>
+        <!--Restaurant Section-->
+        <section class="container" id="restaurants">
+            <h2>popular Restaurants</h2>
+        <div class="restaurants">
+            <div class="card">
+                <img src="https://static.vecteezy.com/system/resources/previews/019/023/604/large_2x/front-view-tasty-meat-burger-with-cheese-and-salad-free-photo.jpg" alt="delicious burger">
+                <div class="card-content">
+                <h3>burger house</h3>
+                <p class="rating">4.5 rating</p>
+                <p class="details"> burger,fastfood.25minutes</p>
+                <p class="price">150</p>
+                <button class=""order-btn">order now</button> 
+                </div>
+            </div>
+        </div>  
+        <div class="card">
+            <img src="https://s.yimg.com/fz/api/res/1.2/eKsWlsSWVGqxHhWmqLPO4g--~C/YXBwaWQ9c3JjaGRkO2ZpPXN0cmltO2g9Mzg0O3E9ODA7c209MTt3PTUxMg--/https://media.zenfs.com/en/list_wire_usa_today_articles_325/cf0cb55dab29d82a367378be17dfd368.jpg" alt="pizza">
+            <div class="card-content">
+                <h3>pizza hub</h3>
+                <p class="ratings">4.5 rating</p>
+                <p class="details">pizza,itlian.25.minutes</p>
+                <p class="price">180 ruppes</p>
+                <button class="order-btn">order now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://s.yimg.com/fz/api/res/1.2/CQWxmMoBSF4e8hFQ5HiKqg--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD00MTI7cHhvZmY9NTA7cHlvZmY9MTAwO3E9ODA7c3M9MTt3PTM4OA--/https://i.pinimg.com/736x/e1/bc/40/e1bc40d857eebef23656276205422b9f.jpg" alt="chicken biriyani">
+            <div class=""card-content">
+                <h3>birayani spot</h3>
+                <p class="rating">4.7 rating</p>
+                <p class="details">birayani,pak.20 minutes</p>
+                <p class="price">200 rupees</p>
+                <button class="order-btn">order now</button>
+            </div>
+        </div>
+    </div>
+     </section>
+     <!--footer-->
+     <footer>
+        <p> 2026 foodie. made with love for food lovers.</p>
+     </footer>
+    
+</body>
+</html>
